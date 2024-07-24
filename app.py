@@ -10,7 +10,7 @@ INSERT_DEPARTMENT = "INSERT INTO DEPARTMENT (deptName, numfaculty) VALUES (%s, %
 
 app = Flask(__name__)
 #url = os.environ.get("DATABASE_URL")
-connection = psycopg2.connect(database="deptdb",host="localhost",port=5432,user="svcuser",
+connection = psycopg2.connect(database="deptdb",host="postgres-service.default.svc.cluster.local",port=5432,user="svcuser",
                         password="postgres")
 @app.get("/health")
 def health():
