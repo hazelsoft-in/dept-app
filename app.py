@@ -12,6 +12,9 @@ app = Flask(__name__)
 #url = os.environ.get("DATABASE_URL")
 connection = psycopg2.connect(database="deptdb",host="localhost",port=5432,user="svcuser",
                         password="postgres")
+@app.get("/health")
+def health():
+    return {}, 200
 
 @app.post("/department")
 def create_dept():
