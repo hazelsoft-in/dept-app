@@ -28,3 +28,5 @@ def create_dept():
             #deptName = cursor.fetchone()[1]
             return {"id": deptId}, 201
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
